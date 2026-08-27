@@ -1,0 +1,202 @@
+{
+  "manifest_version": "1.0.0",
+  "created_at_utc": "2026-08-27T16:15:54.607288+00:00",
+  "purpose": "SHA-256 evidence-package freeze for the completed MSc operational coding twin dissertation implementation.",
+  "boundary": {
+    "implementation_evidence": true,
+    "scientific_results_reproduced_here": false,
+    "real_nhs_validation_claimed": false,
+    "phase9_runtime_dependency": false,
+    "human_review_required": true,
+    "automatic_acceptance": false
+  },
+  "file_count": 37,
+  "files": [
+    {
+      "path": "EVIDENCE.md",
+      "size_bytes": 1509,
+      "sha256": "f7abd36229d0c515ab2e35d91278d416a80eb33eb1a05f6d636254d2fdb8cdd8"
+    },
+    {
+      "path": "docs/final_demonstration_protocol.md",
+      "size_bytes": 1122,
+      "sha256": "ce5235e2a951f12b73712984372aea589d8c4ebedb112d9c9b108cb27b2de214"
+    },
+    {
+      "path": "docs/final_dissertation_evidence_map.md",
+      "size_bytes": 14446,
+      "sha256": "4c736b963f082a39efa0187c5db13b90bb647636d34727b1c3352dd1115fc08c"
+    },
+    {
+      "path": "docs/final_evidence_index.md",
+      "size_bytes": 24781,
+      "sha256": "eba4cae00c7329f1f2ed5017c1cf70a0187373088a2a7c4cf14bc8d22e9f01cb"
+    },
+    {
+      "path": "docs/final_implementation_record.md",
+      "size_bytes": 6800,
+      "sha256": "281b7680a7e4a26c9c834bb536c84e942c5222dcd925d46576515c6669529015"
+    },
+    {
+      "path": "docs/final_requirements_traceability_matrix.md",
+      "size_bytes": 12455,
+      "sha256": "61235b1f07c80c4c72ba471d6176668f9bdbaa9d66ca6ed56bca01afdbe6f089"
+    },
+    {
+      "path": "docs/final_research_traceability.md",
+      "size_bytes": 22183,
+      "sha256": "e29efd99a16ddf3de278e6719bac868059730a511826cc57b7cb301df5cfbe47"
+    },
+    {
+      "path": "evidence/01_verification/frozen_scientific_contract.txt",
+      "size_bytes": 1516,
+      "sha256": "a7e11425eddcfb24c309503acbf011744b556b29d0e2e08d9e01e4736d17dc13"
+    },
+    {
+      "path": "evidence/01_verification/project_verification.txt",
+      "size_bytes": 3981,
+      "sha256": "15a9ae223397703ea6eddf382fe3282fbdd6fe2b66e206f0b1f050c35938218f"
+    },
+    {
+      "path": "evidence/01_verification/pytest_final_summary.txt",
+      "size_bytes": 346,
+      "sha256": "269eccabd8182b0356d32b7a76873c9897620ee36138748cdd6f53a5ad30b411"
+    },
+    {
+      "path": "evidence/01_verification/pytest_full_results.txt",
+      "size_bytes": 19850,
+      "sha256": "c620e493f361daaca83b93d19bbf789c94ab645aecb897159396fc920a12be24"
+    },
+    {
+      "path": "evidence/02_replay/E01_application_scope.png",
+      "size_bytes": 139231,
+      "sha256": "29ccdc1388d14c59ed0ebb62347b8aa61858a1b240ba7090232d46779f6402f6"
+    },
+    {
+      "path": "evidence/02_replay/E02_replay_case_selected.png",
+      "size_bytes": 61149,
+      "sha256": "d0db6b5c06a572d9e4f62db585095ce1aee14422e6e444fc94d66c761ca2e26f"
+    },
+    {
+      "path": "evidence/02_replay/E03_replay_prediction.png",
+      "size_bytes": 93385,
+      "sha256": "0d6e566c115abefd331570852cbbbef042b793eb1d345e1e86b51fe78d7b477c"
+    },
+    {
+      "path": "evidence/02_replay/E04_replay_xai.png",
+      "size_bytes": 94416,
+      "sha256": "99d314aa7a711f55c0b41fcb429097aea58fee993503afab2415c9905494619f"
+    },
+    {
+      "path": "evidence/03_fresh_inference/E07_fresh_prediction.png",
+      "size_bytes": 83838,
+      "sha256": "416e4dc9328a778e2cf039b9e380cfc3fee71b1a2e22ba8d8d19a1a1fe2f3503"
+    },
+    {
+      "path": "evidence/03_fresh_inference/E08_fresh_lig.png",
+      "size_bytes": 85164,
+      "sha256": "13aae8d027940fd50f3dbe21349d479b681b8bf4689439908585ba832827d376"
+    },
+    {
+      "path": "evidence/04_human_review/E05_awaiting_human_review.png",
+      "size_bytes": 51996,
+      "sha256": "e5c3b4ccd692b40ffe73c99145988ec166769518f694b644441284a24f732870"
+    },
+    {
+      "path": "evidence/04_human_review/E06B_accepted_completed.png",
+      "size_bytes": 58871,
+      "sha256": "c5f9e561f08b22648462191a10fb55a471fcb84e5edd660e882f8426b9b8c942"
+    },
+    {
+      "path": "evidence/04_human_review/E06_accepted_completed.png",
+      "size_bytes": 39698,
+      "sha256": "202db83e816f18a05ad08162d6eaf3101682ea6941fabe30b64577a02c752130"
+    },
+    {
+      "path": "evidence/04_human_review/E09_amended_completed.png",
+      "size_bytes": 38198,
+      "sha256": "3d00738e38fb8fa12114807cf1215a55f24f4af549984fd80254ebe8f40d048f"
+    },
+    {
+      "path": "evidence/05_audit/E10_audit_history.png",
+      "size_bytes": 218771,
+      "sha256": "2b42914bd18c58a7082d58ecf1bed2435258da87a97c7a016915f888870bdf84"
+    },
+    {
+      "path": "evidence/05_audit/E11_audit_integrity_pass.png",
+      "size_bytes": 215153,
+      "sha256": "921b632bcba4feeee46c182ce45a90c88ca381e2cb25a9aaf070c67bb5ab809e"
+    },
+    {
+      "path": "evidence/06_provenance/E12_manifest_sha256_verified.png",
+      "size_bytes": 14281,
+      "sha256": "d473cf2886e5fc07fe7093b224ee83be5e8eb06d7d902df6d58fcb24e5ecd574"
+    },
+    {
+      "path": "evidence/06_provenance/manifest_verification.txt",
+      "size_bytes": 56,
+      "sha256": "ed145852868df74817bb3fb89ff3ce42d14e0c5438674ed8613ff718414b7dcf"
+    },
+    {
+      "path": "evidence/06_provenance/source_artifact_hashes.json",
+      "size_bytes": 1714,
+      "sha256": "6eb34a24be3c63023aa6d7e1aa36c9427d328e0750d81066d781722dfc749910"
+    },
+    {
+      "path": "evidence/06_provenance/working_artifact_manifest.json",
+      "size_bytes": 8192,
+      "sha256": "76469737c7732476d3ae05ec013e245f905c8c352a7ca51bbaca09d746614f7d"
+    },
+    {
+      "path": "evidence/06_provenance/working_artifact_manifest.sha256",
+      "size_bytes": 118,
+      "sha256": "375c25dbc8eb537d427c4b1b9c66308eead1a89f152e5b8586956bef3e8f1594"
+    },
+    {
+      "path": "evidence/dissertation_evidence_map.csv",
+      "size_bytes": 4941,
+      "sha256": "3655d0cd3e7f416c6af92231cfa9aae328849a67ad62ff793cca139a92bed6f9"
+    },
+    {
+      "path": "evidence/evidence_index.csv",
+      "size_bytes": 9993,
+      "sha256": "1bafda21bb8a94ec8d7de01c4c2e58de6395a6aef569eaf39a029b669ea98313"
+    },
+    {
+      "path": "evidence/research_objectives.csv",
+      "size_bytes": 2438,
+      "sha256": "8c54b6549fda9e3fd27cb05193560c9fa0ea1c9df9f640e7c27d45db5eb95a07"
+    },
+    {
+      "path": "evidence/research_traceability.csv",
+      "size_bytes": 8493,
+      "sha256": "85c033db75e40adfb2c3ba420b4f5c2e353fd4ea87989d6ad8baae3c0c3f513a"
+    },
+    {
+      "path": "evidence/research_traceability.json",
+      "size_bytes": 17154,
+      "sha256": "d80530a7d6a427904fb432bc38713315469eee45abac387113c4363adfd7ffff"
+    },
+    {
+      "path": "evidence/visual_evidence_register.csv",
+      "size_bytes": 1856,
+      "sha256": "fc89f4e60d55eca807f47e585536db121769978ef10748c162960d798759a944"
+    },
+    {
+      "path": "scripts/freeze_evidence_package.py",
+      "size_bytes": 9401,
+      "sha256": "ce458276f2d618498466b6076f93b38e7b68ffbe4a82ed569350c2312b7d2a68"
+    },
+    {
+      "path": "scripts/generate_evidence_index.py",
+      "size_bytes": 40948,
+      "sha256": "0b0eb941ccb4e2360c32d261eadba52e3f3e8062696e4ebb04f2c96add7e9cb9"
+    },
+    {
+      "path": "scripts/verify_evidence_package.py",
+      "size_bytes": 10571,
+      "sha256": "9b1eb06ef89857f5eddc97ed6c674786cb3191f031d737f528233ca575c5363d"
+    }
+  ],
+  "manifest_content_sha256": "b4e7d313f68a426db72722ca7819ddb398309ade773e8f58e4e6720c8a5d360e"
+}

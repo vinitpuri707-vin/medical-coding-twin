@@ -1,0 +1,386 @@
+{
+  "case_id": "SYN-47A8B35FC3F9",
+  "category": "I25",
+  "method": "Layer Integrated Gradients",
+  "steps": 50,
+  "baseline": "PAD-content baseline; special tokens preserved",
+  "source_mode": "fresh_lig",
+  "warning": "Token attribution describes model behaviour only. It is not causal clinical evidence.",
+  "convergence_delta": -0.004898190498352051,
+  "evidence": [
+    {
+      "position": 19,
+      "token": ".",
+      "raw_score": 0.1874302625656128,
+      "normalized_score": 0.11026804331203573
+    },
+    {
+      "position": 35,
+      "token": ".",
+      "raw_score": 0.181325763463974,
+      "normalized_score": 0.10667667464977314
+    },
+    {
+      "position": 17,
+      "token": "exercise",
+      "raw_score": 0.15184983611106873,
+      "normalized_score": 0.08933554312959092
+    },
+    {
+      "position": 44,
+      "token": "for",
+      "raw_score": 0.07558740675449371,
+      "normalized_score": 0.044469208588614265
+    },
+    {
+      "position": 43,
+      "token": "discharged",
+      "raw_score": 0.05582943186163902,
+      "normalized_score": 0.03284529470501322
+    },
+    {
+      "position": 24,
+      "token": "demonstrated",
+      "raw_score": 0.055750053375959396,
+      "normalized_score": 0.032798595147657046
+    },
+    {
+      "position": 39,
+      "token": "medical",
+      "raw_score": 0.049620628356933594,
+      "normalized_score": 0.02919256219319106
+    },
+    {
+      "position": 16,
+      "token": "reduced",
+      "raw_score": 0.04728807508945465,
+      "normalized_score": 0.027820286013212066
+    },
+    {
+      "position": 37,
+      "token": "patient",
+      "raw_score": 0.046786677092313766,
+      "normalized_score": 0.027525306028077894
+    },
+    {
+      "position": 11,
+      "token": "ankle",
+      "raw_score": 0.04515999183058739,
+      "normalized_score": 0.026568302615503026
+    },
+    {
+      "position": 40,
+      "token": "treatment",
+      "raw_score": 0.04175102338194847,
+      "normalized_score": 0.0245627551900317
+    },
+    {
+      "position": 46,
+      "token": "##patient",
+      "raw_score": 0.040154729038476944,
+      "normalized_score": 0.02362363121189046
+    }
+  ],
+  "all_token_attributions": [
+    {
+      "position": 1,
+      "token": "synthetic",
+      "raw_score": -0.035670097917318344,
+      "normalized_score": -0.0209852552530812
+    },
+    {
+      "position": 2,
+      "token": "patient",
+      "raw_score": -0.00248128455132246,
+      "normalized_score": -0.001459777031891689
+    },
+    {
+      "position": 3,
+      "token": "presented",
+      "raw_score": 0.004324207082390785,
+      "normalized_score": 0.0025439960832598207
+    },
+    {
+      "position": 4,
+      "token": "with",
+      "raw_score": 0.0036256532184779644,
+      "normalized_score": 0.0021330263355395776
+    },
+    {
+      "position": 5,
+      "token": "worse",
+      "raw_score": 0.01917080394923687,
+      "normalized_score": 0.011278472383620466
+    },
+    {
+      "position": 6,
+      "token": "##ning",
+      "raw_score": -0.027856139466166496,
+      "normalized_score": -0.01638818593708196
+    },
+    {
+      "position": 7,
+      "token": "breathless",
+      "raw_score": 0.024630572646856308,
+      "normalized_score": 0.014490536449379561
+    },
+    {
+      "position": 8,
+      "token": "##ness",
+      "raw_score": 0.017985288053750992,
+      "normalized_score": 0.010581015546495343
+    },
+    {
+      "position": 9,
+      "token": ",",
+      "raw_score": 0.027739018201828003,
+      "normalized_score": 0.016319281735209457
+    },
+    {
+      "position": 10,
+      "token": "bilateral",
+      "raw_score": 0.02404428832232952,
+      "normalized_score": 0.014145616560749218
+    },
+    {
+      "position": 11,
+      "token": "ankle",
+      "raw_score": 0.04515999183058739,
+      "normalized_score": 0.026568302615503026
+    },
+    {
+      "position": 12,
+      "token": "o",
+      "raw_score": 0.02541658654808998,
+      "normalized_score": 0.014952960252871572
+    },
+    {
+      "position": 13,
+      "token": "##ede",
+      "raw_score": -0.02490304596722126,
+      "normalized_score": -0.014650836603047964
+    },
+    {
+      "position": 14,
+      "token": "##ma",
+      "raw_score": 0.03542429581284523,
+      "normalized_score": 0.020840646176984202
+    },
+    {
+      "position": 15,
+      "token": "and",
+      "raw_score": 0.024158678948879242,
+      "normalized_score": 0.014212914287328775
+    },
+    {
+      "position": 16,
+      "token": "reduced",
+      "raw_score": 0.04728807508945465,
+      "normalized_score": 0.027820286013212066
+    },
+    {
+      "position": 17,
+      "token": "exercise",
+      "raw_score": 0.15184983611106873,
+      "normalized_score": 0.08933554312959092
+    },
+    {
+      "position": 18,
+      "token": "tolerance",
+      "raw_score": 0.036440566182136536,
+      "normalized_score": 0.0214385333247895
+    },
+    {
+      "position": 19,
+      "token": ".",
+      "raw_score": 0.1874302625656128,
+      "normalized_score": 0.11026804331203573
+    },
+    {
+      "position": 20,
+      "token": "echo",
+      "raw_score": 0.02417987398803234,
+      "normalized_score": 0.014225383647736976
+    },
+    {
+      "position": 21,
+      "token": "##card",
+      "raw_score": 0.003321830416098237,
+      "normalized_score": 0.001954282809956221
+    },
+    {
+      "position": 22,
+      "token": "##io",
+      "raw_score": 0.02699507400393486,
+      "normalized_score": 0.015881608171121577
+    },
+    {
+      "position": 23,
+      "token": "##graphy",
+      "raw_score": 0.03893086686730385,
+      "normalized_score": 0.02290361468386775
+    },
+    {
+      "position": 24,
+      "token": "demonstrated",
+      "raw_score": 0.055750053375959396,
+      "normalized_score": 0.032798595147657046
+    },
+    {
+      "position": 25,
+      "token": "impaired",
+      "raw_score": -0.00011975830420851707,
+      "normalized_score": -7.045561210168993e-05
+    },
+    {
+      "position": 26,
+      "token": "left",
+      "raw_score": 0.0342261865735054,
+      "normalized_score": 0.020135780486205873
+    },
+    {
+      "position": 27,
+      "token": "vent",
+      "raw_score": 0.011560610495507717,
+      "normalized_score": 0.006801281081201968
+    },
+    {
+      "position": 28,
+      "token": "##ric",
+      "raw_score": 0.034276049584150314,
+      "normalized_score": 0.020165115645545666
+    },
+    {
+      "position": 29,
+      "token": "##ular",
+      "raw_score": 0.03443177044391632,
+      "normalized_score": 0.020256728570130108
+    },
+    {
+      "position": 30,
+      "token": "s",
+      "raw_score": 0.013201804831624031,
+      "normalized_score": 0.00776682040052608
+    },
+    {
+      "position": 31,
+      "token": "##ys",
+      "raw_score": 0.023518046364188194,
+      "normalized_score": 0.01383602049958687
+    },
+    {
+      "position": 32,
+      "token": "##to",
+      "raw_score": 0.007187673822045326,
+      "normalized_score": 0.004228616646389363
+    },
+    {
+      "position": 33,
+      "token": "##lic",
+      "raw_score": 0.0012294328771531582,
+      "normalized_score": 0.0007232938581607536
+    },
+    {
+      "position": 34,
+      "token": "function",
+      "raw_score": -0.002362821251153946,
+      "normalized_score": -0.0013900832901497671
+    },
+    {
+      "position": 35,
+      "token": ".",
+      "raw_score": 0.181325763463974,
+      "normalized_score": 0.10667667464977314
+    },
+    {
+      "position": 36,
+      "token": "the",
+      "raw_score": -0.025533854961395264,
+      "normalized_score": -0.01502195102469506
+    },
+    {
+      "position": 37,
+      "token": "patient",
+      "raw_score": 0.046786677092313766,
+      "normalized_score": 0.027525306028077894
+    },
+    {
+      "position": 38,
+      "token": "received",
+      "raw_score": 0.037881746888160706,
+      "normalized_score": 0.02228640161637188
+    },
+    {
+      "position": 39,
+      "token": "medical",
+      "raw_score": 0.049620628356933594,
+      "normalized_score": 0.02919256219319106
+    },
+    {
+      "position": 40,
+      "token": "treatment",
+      "raw_score": 0.04175102338194847,
+      "normalized_score": 0.0245627551900317
+    },
+    {
+      "position": 41,
+      "token": "and",
+      "raw_score": 0.012466249987483025,
+      "normalized_score": 0.007334082419466458
+    },
+    {
+      "position": 42,
+      "token": "was",
+      "raw_score": 0.017336158081889153,
+      "normalized_score": 0.010199122618039647
+    },
+    {
+      "position": 43,
+      "token": "discharged",
+      "raw_score": 0.05582943186163902,
+      "normalized_score": 0.03284529470501322
+    },
+    {
+      "position": 44,
+      "token": "for",
+      "raw_score": 0.07558740675449371,
+      "normalized_score": 0.044469208588614265
+    },
+    {
+      "position": 45,
+      "token": "out",
+      "raw_score": -0.009960101917386055,
+      "normalized_score": -0.005859677805413871
+    },
+    {
+      "position": 46,
+      "token": "##patient",
+      "raw_score": 0.040154729038476944,
+      "normalized_score": 0.02362363121189046
+    },
+    {
+      "position": 47,
+      "token": "follow",
+      "raw_score": -0.001142081106081605,
+      "normalized_score": -0.0006719034970522896
+    },
+    {
+      "position": 48,
+      "token": "-",
+      "raw_score": -0.01777620054781437,
+      "normalized_score": -0.010458006221079955
+    },
+    {
+      "position": 49,
+      "token": "up",
+      "raw_score": -0.00948359165340662,
+      "normalized_score": -0.00557933964812873
+    },
+    {
+      "position": 50,
+      "token": ".",
+      "raw_score": 0.00024336110800504684,
+      "normalized_score": 0.00014317300115060944
+    }
+  ]
+}

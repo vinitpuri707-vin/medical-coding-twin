@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0",
+  "governance_version": "2.0.1",
+  "phase10_run_id": "P10-POSTTEST-ERROR-CLAIMS-FREEZE-v201",
+  "source_phase9_run_id": "P9-ONESHOT-CONFIRMATORY-v201-SEED42",
+  "created_at_utc": "2026-08-22T18:14:46.726946+00:00",
+  "analysis_inputs": [
+    "metrics/phase9_confirmatory_results.json",
+    "predictions/test_predictions.csv",
+    "predictions/baseline_test_probabilities.npy",
+    "predictions/transformer_raw_probabilities.npy",
+    "predictions/transformer_calibrated_probabilities.npy"
+  ],
+  "prohibited_operations": {
+    "test_inference_repeated": false,
+    "training": false,
+    "recalibration": false,
+    "threshold_fitting": false,
+    "threshold_selection": false,
+    "model_selection": false
+  },
+  "confirmatory_results": {
+    "transformer_errors": 33,
+    "baseline_accuracy": 1.0,
+    "baseline_errors": 0,
+    "transformer_macro_f1": 0.8782639296187683,
+    "baseline_macro_f1": 1.0,
+    "H1_macro_f1_difference": -0.12173607038123169,
+    "H1_ci_95": [
+      -0.12907608695652173,
+      -0.11199999999999999
+    ],
+    "raw_nll": 1.4210398125539745,
+    "calibrated_nll": 0.23500794708304193,
+    "H2_nll_difference": -1.1860318654709325,
+    "H2_nll_ci_95": [
+      -1.2578408576944187,
+      -1.1149555024030915
+    ],
+    "top3_accuracy": 1.0,
+    "error_top3_recovery_rate": 1.0
+  },
+  "frozen_claims": [
+    {
+      "claim_id": "C1",
+      "claim": "The transformer-superiority hypothesis was not supported.",
+      "status": "FROZEN",
+      "basis": "The frozen Phase 9 Macro-F1 difference did not have a positive 95% confidence interval excluding zero."
+    },
+    {
+      "claim_id": "C2",
+      "claim": "The calibration hypothesis was supported.",
+      "status": "FROZEN",
+      "basis": "The frozen Phase 9 calibrated-minus-raw NLL difference was negative and its 95% confidence interval remained below zero."
+    },
+    {
+      "claim_id": "C3",
+      "claim": "BNS-CCB is a synthetic benchmark and is susceptible to lexical/template shortcuts.",
+      "status": "FROZEN",
+      "basis": "The frozen TF-IDF/logistic-regression baseline achieved perfect one-shot test classification; Phase 10 output signatures show extreme label-specific separability. No test text was reopened in Phase 10."
+    },
+    {
+      "claim_id": "C4",
+      "claim": "The results do not establish generalisation to real NHS clinical data.",
+      "status": "FROZEN",
+      "basis": "The confirmatory experiment evaluates a project-generated synthetic benchmark, not genuine NHS free text."
+    },
+    {
+      "claim_id": "C5",
+      "claim": "Model predictions require human review.",
+      "status": "FROZEN",
+      "basis": "Calibrated confidence and Top-3 outputs are decision-support information only; no automatic acceptance policy is authorised."
+    }
+  ],
+  "operational_interpretation": {
+    "calibrated_confidence": "Descriptive model uncertainty supporting human interpretation; not a clinical-safety or billing-correctness probability.",
+    "top3_suggestions": "A ranked shortlist can retain the true code for some top-1 errors and may therefore help a human reviewer consider plausible alternatives.",
+    "automatic_acceptance": false,
+    "human_review_required": true
+  },
+  "shortcut_audit_scope": {
+    "direct_test_text_reinspection": false,
+    "tfidf_coefficients_reopened": false,
+    "direct_lexical_attribution": false,
+    "output_only_probability_signature_analysis": true,
+    "interpretive_limit": "Phase 10 cannot identify literal test-note shortcut tokens using predictions and probabilities alone."
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "case_id": "REPLAY-271-D30BFAEA",
+  "category": "Z87",
+  "method": "Layer Integrated Gradients (frozen Phase 8B replay)",
+  "steps": 50,
+  "baseline": "PAD-content baseline; special tokens preserved",
+  "source_mode": "frozen_validation_replay",
+  "warning": "Token attribution describes model behaviour only. It is not causal clinical evidence.",
+  "convergence_delta": null,
+  "evidence": [
+    {
+      "position": 0,
+      "token": "##dic",
+      "raw_score": 0.09787316620349884,
+      "normalized_score": 0.03401002660393715
+    },
+    {
+      "position": 1,
+      "token": "##th",
+      "raw_score": 0.08855602890253067,
+      "normalized_score": 0.030772408470511436
+    },
+    {
+      "position": 2,
+      "token": "##dic",
+      "raw_score": 0.07938219606876373,
+      "normalized_score": 0.027584586292505264
+    },
+    {
+      "position": 3,
+      "token": "##ae",
+      "raw_score": 0.05356331542134285,
+      "normalized_score": 0.018612761050462723
+    },
+    {
+      "position": 4,
+      "token": "##ae",
+      "raw_score": 0.04206106811761856,
+      "normalized_score": 0.01461583562195301
+    },
+    {
+      "position": 5,
+      "token": "chronic",
+      "raw_score": 0.039441462606191635,
+      "normalized_score": 0.013705546967685223
+    },
+    {
+      "position": 6,
+      "token": "or",
+      "raw_score": 0.03627924621105194,
+      "normalized_score": 0.012606705538928509
+    },
+    {
+      "position": 7,
+      "token": "pro",
+      "raw_score": 0.03552798181772232,
+      "normalized_score": 0.012345648370683193
+    },
+    {
+      "position": 8,
+      "token": "hip",
+      "raw_score": 0.033356137573719025,
+      "normalized_score": 0.011590952053666115
+    },
+    {
+      "position": 9,
+      "token": "hip",
+      "raw_score": 0.03170524910092354,
+      "normalized_score": 0.01101728342473507
+    },
+    {
+      "position": 10,
+      "token": "##s",
+      "raw_score": 0.029980860650539398,
+      "normalized_score": 0.010418074205517769
+    },
+    {
+      "position": 11,
+      "token": "##th",
+      "raw_score": 0.02961759828031063,
+      "normalized_score": 0.010291843675076962
+    },
+    {
+      "position": 12,
+      "token": "pro",
+      "raw_score": 0.028728341683745384,
+      "normalized_score": 0.009982835501432419
+    },
+    {
+      "position": 13,
+      "token": "joint",
+      "raw_score": 0.027448438107967377,
+      "normalized_score": 0.009538080543279648
+    },
+    {
+      "position": 14,
+      "token": "following",
+      "raw_score": 0.026758303865790367,
+      "normalized_score": 0.009298264980316162
+    },
+    {
+      "position": 15,
+      "token": "showed",
+      "raw_score": 0.02665795013308525,
+      "normalized_score": 0.009263393469154835
+    },
+    {
+      "position": 16,
+      "token": "the",
+      "raw_score": 0.025450872257351875,
+      "normalized_score": 0.008843944407999516
+    },
+    {
+      "position": 17,
+      "token": ",",
+      "raw_score": 0.0242733396589756,
+      "normalized_score": 0.008434763178229332
+    },
+    {
+      "position": 18,
+      "token": "follow",
+      "raw_score": 0.02426958829164505,
+      "normalized_score": 0.00843345932662487
+    },
+    {
+      "position": 19,
+      "token": "pro",
+      "raw_score": 0.023681489750742912,
+      "normalized_score": 0.00822910014539957
+    },
+    {
+      "position": 20,
+      "token": "##hesis",
+      "raw_score": 0.02352467179298401,
+      "normalized_score": 0.008174607530236244
+    }
+  ],
+  "all_token_attributions": []
+}

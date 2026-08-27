@@ -1,0 +1,27 @@
+{
+  "seed42_manifest": {
+    "path": "/content/drive/MyDrive/Dissertation/BNS-CCB/experiments/phase7/P7-BIOCLINICALBERT-3SEED-ROBUSTNESS-v1/seed_42/manifest.json",
+    "sha256": "882f5b493d63b6c95f88e4b7c1c8f3f3898467da9f1cc37d6ebc3085d03ae55d"
+  },
+  "validation_logits": {
+    "path": "/content/drive/MyDrive/Dissertation/BNS-CCB/experiments/phase7/P7-BIOCLINICALBERT-3SEED-ROBUSTNESS-v1/seed_42/predictions/validation_logits.npy",
+    "sha256": "0996abbae19eed2d5eae355e31a9faea3598a0e6ddbd6abbbe0269fdb0731c85"
+  },
+  "validation_probabilities": {
+    "path": "/content/drive/MyDrive/Dissertation/BNS-CCB/experiments/phase7/P7-BIOCLINICALBERT-3SEED-ROBUSTNESS-v1/seed_42/predictions/validation_probabilities.npy",
+    "sha256": "4345b568d44e4ca6125622f229bd6faed3ad85c94dc22e3da90bca0a76f3ea8d"
+  },
+  "validation_labels": {
+    "path": "/content/drive/MyDrive/Dissertation/BNS-CCB/experiments/phase7/P7-BIOCLINICALBERT-3SEED-ROBUSTNESS-v1/seed_42/predictions/validation_labels.npy",
+    "sha256": "5bc6c1636c35d8de97818c7e56f7c219796d380f2fb43af8450023607f655adb"
+  },
+  "model_files": {
+    "config.json": "bf1b608316e4e99b0b9b9fc1de65ea75931c25530d2618ad52761715d8300bbd",
+    "label_mapping.json": "1d9b298a5d13a60572131d1da9dc33eaf39af35f2c911ec481322cb03f066b73",
+    "model.safetensors": "e85c522f67943b8d2c5e2709f4ebf0469cdfeb8125a2e3fd37516145f8e45cf8",
+    "tokenizer.json": "0e4fadb17e964f8f225a29b3c0203afbae9a46f9137a9e4c3d97787157dc4703",
+    "tokenizer_config.json": "9f0c2c65a70ea18113ffa2e717103e7210ea826e7acc3442b69b346686b55a48",
+    "training_args.bin": "411fe7f6b2e09e07a09145d24094b4660ecdbc6e7e40f05d64d998a025dd8b39"
+  },
+  "test_partition_evaluated": false
+}

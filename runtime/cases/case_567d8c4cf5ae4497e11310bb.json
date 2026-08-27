@@ -1,0 +1,63 @@
+{
+  "case_id": "REPLAY-271-41863AB0",
+  "state": "Awaiting Human Review",
+  "created_at_utc": "2026-08-26T23:37:48.841237+00:00",
+  "updated_at_utc": "2026-08-26T23:38:58.064229+00:00",
+  "source": {
+    "mode": "frozen_validation_replay",
+    "reference": "271",
+    "sha256": "003c9b76a43023103b101161cb4100c85b4a4c43f1175b605e75b348edf6d4bf"
+  },
+  "clinical_text": null,
+  "preprocessing": {
+    "input_policy": "frozen_validation_replay",
+    "status": "validated"
+  },
+  "prediction": {
+    "recommendation": "Z87",
+    "predicted_class_id": 41,
+    "calibrated_confidence": 0.3244391984611931,
+    "raw_confidence": null,
+    "temperature": 0.18388931380527324,
+    "input_tokens": 0,
+    "truncated": false,
+    "source_mode": "frozen_validation_replay",
+    "top3": [
+      {
+        "rank": 1,
+        "category": "Z87",
+        "probability": 0.3244391984611931
+      },
+      {
+        "rank": 2,
+        "category": "E66",
+        "probability": 0.2554741405214233
+      },
+      {
+        "rank": 3,
+        "category": "Z96",
+        "probability": 0.18576552360998133
+      }
+    ]
+  },
+  "explanation": {
+    "category": "Z87",
+    "method": "Layer Integrated Gradients (frozen Phase 8B replay)",
+    "steps": 50,
+    "baseline": "PAD-content baseline; special tokens preserved",
+    "source_mode": "frozen_validation_replay",
+    "warning": "Token attribution describes model behaviour only. It is not causal clinical evidence.",
+    "convergence_delta": null,
+    "evidence_count": 21,
+    "explanation_ref": "F:\\operational_coding_twin\\runtime\\explanations\\explanation_567d8c4cf5ae4497e11310bb.json"
+  },
+  "review": null,
+  "final_category": null,
+  "governance": {
+    "model_reference": "P7-BIOCLINICALBERT-SEED42-CANONICAL",
+    "calibrator_reference": "P8B-CORRECTIVE-V201-SEED42::temperature=0.1838893138",
+    "claims_reference": "P10-POSTTEST-ERROR-CLAIMS-FREEZE-v201",
+    "automatic_acceptance": false,
+    "human_review_required": true
+  }
+}

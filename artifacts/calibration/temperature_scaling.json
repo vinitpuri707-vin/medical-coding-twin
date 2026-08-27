@@ -1,0 +1,27 @@
+{
+  "governance_version": "2.0.1",
+  "method": "single_scalar_temperature_scaling",
+  "fit_partition": "validation",
+  "fit_examples": 375,
+  "seed": 42,
+  "optimizer": "L-BFGS",
+  "objective": "multiclass_negative_log_likelihood",
+  "parameterisation": "T = exp(log_T)",
+  "probability_transformation": "softmax(logits / T)",
+  "temperature": 0.18388931380527324,
+  "ece_bins": 15,
+  "ece_binning": "fixed_equal_width_[0,1]",
+  "brier_definition": "mean over examples of sum_k (p_k - y_k)^2",
+  "raw": {
+    "nll": 1.433160593530462,
+    "multiclass_brier": 0.5271865536325088,
+    "ece_15_bin": 0.6062184398892255
+  },
+  "calibrated": {
+    "nll": 0.2096590570134237,
+    "multiclass_brier": 0.10630241355077544,
+    "ece_15_bin": 0.04848398706878144
+  },
+  "prediction_classes_changed": 0,
+  "test_partition_evaluated": false
+}

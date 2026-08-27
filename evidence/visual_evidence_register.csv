@@ -1,0 +1,13 @@
+evidence_id,topic,file,demonstrates,status
+E01,Application scope,evidence/02_replay/E01_application_scope.png,"Synthetic/demo boundary, mandatory human review and application governance.",VERIFIED
+E02,Frozen validation replay,evidence/02_replay/E02_replay_case_selected.png,Selection of a deterministic Phase 8B validation replay case.,VERIFIED
+E03,Replay prediction,evidence/02_replay/E03_replay_prediction.png,"Top-1, Top-3 and calibrated probability display during frozen validation replay.",VERIFIED
+E04,Replay explainability,evidence/02_replay/E04_replay_xai.png,Frozen Phase 8B LIG evidence displayed within the operational workflow.,VERIFIED
+E05,Mandatory human review,evidence/04_human_review/E05_awaiting_human_review.png,AI recommendation reaching the explicit human review gate.,VERIFIED
+E06,Acceptance workflow,evidence/04_human_review/E06_accepted_completed.png,Human acceptance followed by explicit workflow completion.,VERIFIED
+E07,Fresh frozen-model inference,evidence/03_fresh_inference/E07_fresh_prediction.png,New synthetic-note inference using the frozen BioClinicalBERT model.,VERIFIED
+E08,Fresh Layer Integrated Gradients,evidence/03_fresh_inference/E08_fresh_lig.png,Runtime 50-step predicted-class LIG evidence.,VERIFIED
+E09,Human amendment,evidence/04_human_review/E09_amended_completed.png,Human reviewer replacing an AI recommendation with another valid frozen ICD-10 category.,VERIFIED
+E10,Operational audit history,evidence/05_audit/E10_audit_history.png,Ordered operational events for a coding case.,VERIFIED
+E11,Audit integrity,evidence/05_audit/E11_audit_integrity_pass.png,Successful verification of the tamper-evident audit hash chain.,VERIFIED
+E12,Working-build provenance,evidence/06_provenance/E12_manifest_sha256_verified.png,Successful SHA-256 verification of the frozen working-build manifest.,VERIFIED

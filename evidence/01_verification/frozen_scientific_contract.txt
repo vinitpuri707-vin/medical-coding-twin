@@ -1,0 +1,18 @@
+]633;E;{   echo "FINAL OPERATIONAL TWIN SCIENTIFIC CONTRACT"\x3b   echo "=========================================="\x3b   echo\x3b   echo "Model: P7-BIOCLINICALBERT-SEED42-CANONICAL"\x3b   echo "Architecture: BertForSequenceClassification"\x3b   echo "Base model: emilyalsentzer/Bio_ClinicalBERT"\x3b   echo "Task: single-label multiclass"\x3b   echo "ICD-10 categories: 50"\x3b   echo "Maximum sequence length: 320"\x3b   echo "Temperature: 0.18388931380527324"\x3b   echo "Calibration fit partition: validation"\x3b   echo "LIG steps: 50"\x3b   echo "LIG target: predicted class"\x3b   echo "LIG baseline: PAD-content baseline"\x3b   echo "Automatic acceptance: false"\x3b   echo "Human review required: true"\x3b   echo "Replay: Phase 8B deterministic validation sample"\x3b   echo "Phase 9 runtime dependency: none"\x3b } > evidence/01_verification/frozen_scientific_contract.txt;3e46e809-3648-485e-9cf2-2bd8e6496c08]633;CFINAL OPERATIONAL TWIN SCIENTIFIC CONTRACT
+==========================================
+
+Model: P7-BIOCLINICALBERT-SEED42-CANONICAL
+Architecture: BertForSequenceClassification
+Base model: emilyalsentzer/Bio_ClinicalBERT
+Task: single-label multiclass
+ICD-10 categories: 50
+Maximum sequence length: 320
+Temperature: 0.18388931380527324
+Calibration fit partition: validation
+LIG steps: 50
+LIG target: predicted class
+LIG baseline: PAD-content baseline
+Automatic acceptance: false
+Human review required: true
+Replay: Phase 8B deterministic validation sample
+Phase 9 runtime dependency: none

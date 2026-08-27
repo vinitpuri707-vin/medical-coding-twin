@@ -1,0 +1,85 @@
+
+========================================================================
+STEP 15 — OPERATIONAL CODING TWIN VERIFICATION
+========================================================================
+
+========================================================================
+1. FROZEN RESOURCES
+========================================================================
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights: 100%|##########| 201/201 [00:00<00:00, 4561.57it/s]
+Frozen resources                                 PASS
+50-category label space                          PASS
+Validation replay n=100                          PASS
+Calibration temperature                          PASS
+
+========================================================================
+2. REPLAY SERVICES
+========================================================================
+Frozen inference service                         PASS
+Frozen explainability service                    PASS
+
+========================================================================
+3. DETERMINISTIC VALIDATION CASES
+========================================================================
+Selected validation rows: [271, 218, 183]
+Replay predictions                               PASS
+Replay Top-3                                     PASS
+Replay LIG target alignment                      PASS
+Replay LIG 50 steps                              PASS
+
+========================================================================
+4. DIGITAL-TWIN WORKFLOW
+========================================================================
+Accept workflow                                  PASS
+Amend workflow                                   PASS
+Reject workflow                                  PASS
+
+========================================================================
+5. GOVERNANCE BLOCKS
+========================================================================
+Automatic completion blocked                     PASS
+Missing reviewer blocked                         PASS
+Missing review reason blocked                    PASS
+Invalid amendment blocked                        PASS
+
+========================================================================
+6. CASE PERSISTENCE SAFETY
+========================================================================
+Duplicate case ID blocked                        PASS
+Current case state persistence                   PASS
+Prediction persistence                           PASS
+Explanation persistence                          PASS
+Human-review persistence                         PASS
+
+========================================================================
+7. AUDIT INTEGRITY
+========================================================================
+Audit event count: 26
+Append-only audit events                         PASS
+Audit SHA-256 chain                              PASS
+
+========================================================================
+8. SEALED TEST-PARTITION GUARD
+========================================================================
+Validation replay only                           PASS
+Phase 9 dependency absent                        PASS
+
+========================================================================
+STEP 15 RESULT
+========================================================================
+Frozen artefacts                  PASS
+Frozen BioClinicalBERT resources  PASS
+Validation replay                 PASS
+Top-3 recommendations             PASS
+Layer Integrated Gradients        PASS
+Accept workflow                   PASS
+Reject workflow                   PASS
+Amend workflow                    PASS
+Automatic acceptance              BLOCKED
+Reviewer identity                 REQUIRED
+Review reason                     REQUIRED
+Duplicate case overwrite          BLOCKED
+Audit SHA-256 chain               PASS
+TEST PARTITION ACCESSED           NO
+
+STEP 15: PASS

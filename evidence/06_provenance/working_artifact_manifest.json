@@ -1,0 +1,224 @@
+{
+  "manifest_version": "1.0.0",
+  "created_at_utc": "2026-08-27T15:26:19.210273+00:00",
+  "project": "operational_coding_twin",
+  "purpose": "SHA-256 freeze of the completed working operational digital-twin research prototype.",
+  "research_boundary": {
+    "primary_runtime_scope": "synthetic/demo data only",
+    "replay_partition": "validation",
+    "phase9_test_runtime_access": false,
+    "automatic_acceptance": false,
+    "human_review_required": true
+  },
+  "frozen_scientific_contract": {
+    "model_reference": "P7-BIOCLINICALBERT-SEED42-CANONICAL",
+    "calibrator_reference": "P8B-CORRECTIVE-V201-SEED42::temperature=0.1838893138",
+    "claims_reference": "P10-POSTTEST-ERROR-CLAIMS-FREEZE-v201",
+    "temperature": 0.1838893138,
+    "max_length": 320,
+    "label_count": 50,
+    "prediction_setting": "single-label multiclass",
+    "calibration": "single scalar temperature scaling",
+    "explainability": "Layer Integrated Gradients",
+    "lig_steps": 50,
+    "lig_target": "predicted class",
+    "lig_baseline": "PAD-content baseline; special tokens preserved"
+  },
+  "environment": {
+    "python": "3.14.7 (tags/v3.14.7:823f032, Aug  5 2026, 10:51:32) [MSC v.1944 64 bit (AMD64)]",
+    "python_executable": "F:\\operational_coding_twin\\.venv\\Scripts\\python.exe",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "torch": "2.13.0",
+      "transformers": "5.16.1",
+      "captum": "0.9.0",
+      "streamlit": "1.62.0",
+      "numpy": "2.5.2",
+      "pandas": "3.0.5",
+      "pytest": "8.4.2"
+    }
+  },
+  "files": [
+    {
+      "path": "pyproject.toml",
+      "size_bytes": 1021,
+      "sha256": "444b6fb4fea488056ba6bc8a42439c95df412b735fb4546ac7f67f0032f4f5b6"
+    },
+    {
+      "path": "uv.lock",
+      "size_bytes": 487230,
+      "sha256": "329b4c8032d4252de644569cae7c5f2be8d315f43072282f43e41648fa9a1c51"
+    },
+    {
+      "path": "scripts/freeze_working_build.py",
+      "size_bytes": 10937,
+      "sha256": "ada27e437f00e7b4f3ca36cd6d326a56dbd3e7a4f72d16b738544e3b66701d16"
+    },
+    {
+      "path": "docs/final_implementation_record.md",
+      "size_bytes": 6800,
+      "sha256": "281b7680a7e4a26c9c834bb536c84e942c5222dcd925d46576515c6669529015"
+    },
+    {
+      "path": "docs/final_requirements_traceability_matrix.md",
+      "size_bytes": 12455,
+      "sha256": "61235b1f07c80c4c72ba471d6176668f9bdbaa9d66ca6ed56bca01afdbe6f089"
+    },
+    {
+      "path": "docs/final_demonstration_protocol.md",
+      "size_bytes": 1122,
+      "sha256": "ce5235e2a951f12b73712984372aea589d8c4ebedb112d9c9b108cb27b2de214"
+    },
+    {
+      "path": "app/streamlit_app.py",
+      "size_bytes": 40718,
+      "sha256": "3437d4e9e1f69e329aee1ab8a104480c72858abd16fc5c000fe80fa426ea7c19"
+    },
+    {
+      "path": "src/operational_coding_twin/__init__.py",
+      "size_bytes": 129,
+      "sha256": "c82c8eeb9b5b1f3f15144f1b1f1c808f39542e893030308a3c43f9ffff3e7f2e"
+    },
+    {
+      "path": "src/operational_coding_twin/config.py",
+      "size_bytes": 7078,
+      "sha256": "1c515535916b7e5c125fcbfd541adb9115565edd2dfee18ed1b30983f8a6d2ad"
+    },
+    {
+      "path": "src/operational_coding_twin/frozen_resources.py",
+      "size_bytes": 19784,
+      "sha256": "d490ed2189644c203c554f248891e12351a3742ccd42e59d8699f56bc89d6d6a"
+    },
+    {
+      "path": "src/operational_coding_twin/inference.py",
+      "size_bytes": 15598,
+      "sha256": "f6fb6153064337dd53292799fff727ae9b7a2cca59917e0ed4f79af2e128a871"
+    },
+    {
+      "path": "src/operational_coding_twin/explainability.py",
+      "size_bytes": 22258,
+      "sha256": "82574c1919b210ca6ae801a1a708506bf6b9b2e84c8ce06c9628cc3906fbb101"
+    },
+    {
+      "path": "src/operational_coding_twin/digital_twin.py",
+      "size_bytes": 37965,
+      "sha256": "55fd124466e31d3a025fcd13197a59025060189d93d819146856d1a2b4e4b893"
+    },
+    {
+      "path": "src/operational_coding_twin/case_store.py",
+      "size_bytes": 5662,
+      "sha256": "4c48f488ac43d48bcfb35e1f7074aa3e741b4a6025b329142e2e4e6deb7cb306"
+    },
+    {
+      "path": "src/operational_coding_twin/audit_log.py",
+      "size_bytes": 9414,
+      "sha256": "fc6128b379ec8abd48552d464a71a2a75195f7db7a6b52f0dcb9143c3814b309"
+    },
+    {
+      "path": "scripts/check_artifacts.py",
+      "size_bytes": 14474,
+      "sha256": "88863cab206b5cfc8f08d9ca243b273b1a8fd269cded9d2547c49d560275afb0"
+    },
+    {
+      "path": "scripts/check_digital_twin.py",
+      "size_bytes": 10878,
+      "sha256": "302598eb06bb0054396c83f53928c340a9142f309a1d3fdc8f86a5b9824cb2a8"
+    },
+    {
+      "path": "scripts/verify_project.py",
+      "size_bytes": 26381,
+      "sha256": "db41d0d2920a47ec2126a171a18fd0411e7f05c0e2d8998108d753377cc68a60"
+    },
+    {
+      "path": "tests/test_foundation.py",
+      "size_bytes": 10942,
+      "sha256": "403953be88b4c1e2f8554e0254269300561b40ff47ee1aa08c597d13a1ad0f16"
+    },
+    {
+      "path": "tests/test_frozen_resources.py",
+      "size_bytes": 15977,
+      "sha256": "5641d55fb6ee7db0a5d9cac04007371c8fd8e94e52d57d46c0096c73418f73aa"
+    },
+    {
+      "path": "tests/test_inference.py",
+      "size_bytes": 16067,
+      "sha256": "a4f700ae0ee16f18a9ddc8496363bb7534c29e6f933cc97f50f7aaa940ed329d"
+    },
+    {
+      "path": "tests/test_explainability.py",
+      "size_bytes": 21494,
+      "sha256": "242005885ac4d333d241039c97f2c6b671f0a7a17b247089bd3ecf468d13135a"
+    },
+    {
+      "path": "tests/test_digital_twin.py",
+      "size_bytes": 38426,
+      "sha256": "fc8925dc7cbd75ce03cbd576367ec48887a9e790538bfc2f19bc80672df61b80"
+    },
+    {
+      "path": "tests/test_governance.py",
+      "size_bytes": 11218,
+      "sha256": "8e6885cde1544e4973e4261e2497aa877f4913df01fe1904381b67d80644967d"
+    },
+    {
+      "path": "artifacts/model/model.safetensors",
+      "size_bytes": 433418416,
+      "sha256": "c6216a7817c28e300cd911f7aa4f745107a9c663ccb2a95e72f03efb48882331"
+    },
+    {
+      "path": "artifacts/model/config.json",
+      "size_bytes": 2490,
+      "sha256": "92f7dc07dcdc18911ccdb5e1b5feb72b402222cbc3cd49684fc5a032bba78a16"
+    },
+    {
+      "path": "artifacts/model/tokenizer.json",
+      "size_bytes": 698172,
+      "sha256": "02b7a0b53cc3b09f0d0a049e0fed58a816f01c98db888df8b7713437993a897c"
+    },
+    {
+      "path": "artifacts/model/tokenizer_config.json",
+      "size_bytes": 392,
+      "sha256": "a25b3d90de18e30f4dafc7f84e1327661a03049e7ba02a080e3eb234db1a0eb5"
+    },
+    {
+      "path": "artifacts/model/label_mapping.json",
+      "size_bytes": 1727,
+      "sha256": "895869dc60ec1157cc7cf6d5077502b3f9586744161152999ba34c225d3d1a1c"
+    },
+    {
+      "path": "artifacts/calibration/temperature_scaling.json",
+      "size_bytes": 856,
+      "sha256": "22f24dce7e3ab928cf6705b36f3c986d319efb3d32e69816ea5b4e9cd4c318cb"
+    },
+    {
+      "path": "artifacts/replay/deterministic_validation_sample_100.csv",
+      "size_bytes": 11630,
+      "sha256": "40a7a73e8611bd5b11ac1525da159648deb9eb63d910b57393ab5dda69aad2e5"
+    },
+    {
+      "path": "artifacts/replay/validation_calibrated_probabilities.npy",
+      "size_bytes": 150128,
+      "sha256": "0310bc20c768bb0ac7113f06af3da1fe245c61f2ca01658b90d8ead8c01c3440"
+    },
+    {
+      "path": "artifacts/replay/layer_integrated_gradients_cases.csv",
+      "size_bytes": 333135,
+      "sha256": "a78d45e5fbc4579ffd78dafca3c4630bee735a9eb8b81837be02652934de67d4"
+    },
+    {
+      "path": "artifacts/governance/final_claims_freeze.json",
+      "size_bytes": 3664,
+      "sha256": "13fb818ef2e70339d7987dc2b6a111f34898c8559ed15aef01cf6a3b8a8a37f1"
+    },
+    {
+      "path": "artifacts/provenance/source_artifact_hashes.json",
+      "size_bytes": 1714,
+      "sha256": "6eb34a24be3c63023aa6d7e1aa36c9427d328e0750d81066d781722dfc749910"
+    },
+    {
+      "path": "runtime/pytest_full_results.txt",
+      "size_bytes": 19850,
+      "sha256": "c620e493f361daaca83b93d19bbf789c94ab645aecb897159396fc920a12be24"
+    }
+  ],
+  "manifest_sha256": "bb0e558c30df5c68ab7ca50168c054bbb5026a0033f8c61b226d43ebb19ba73c"
+}

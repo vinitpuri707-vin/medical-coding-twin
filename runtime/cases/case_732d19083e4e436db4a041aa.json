@@ -1,0 +1,71 @@
+{
+  "case_id": "SYN-4BE5C538824D",
+  "state": "Completed",
+  "created_at_utc": "2026-08-27T00:48:50.479579+00:00",
+  "updated_at_utc": "2026-08-27T00:50:24.428860+00:00",
+  "source": {
+    "mode": "synthetic_note",
+    "reference": null,
+    "sha256": "6d6f91ad9bf7098ae538b9bcb9c8a1d265558ab12ddf3a1e7dac09002487c89b"
+  },
+  "clinical_text": "Synthetic patient presented with worsening breathlessness, bilateral ankle\noedema and reduced exercise tolerance. Echocardiography demonstrated impaired\nleft ventricular systolic function. The patient received medical treatment and\nwas discharged for outpatient follow-up.",
+  "preprocessing": {
+    "input_policy": "clinical_text_only",
+    "characters": 272,
+    "status": "validated"
+  },
+  "prediction": {
+    "recommendation": "I25",
+    "predicted_class_id": 16,
+    "calibrated_confidence": 0.6382431983947754,
+    "raw_confidence": 0.06840410828590393,
+    "temperature": 0.18388931380527324,
+    "input_tokens": 52,
+    "truncated": false,
+    "source_mode": "fresh_frozen_inference",
+    "top3": [
+      {
+        "rank": 1,
+        "category": "I25",
+        "probability": 0.6382431983947754
+      },
+      {
+        "rank": 2,
+        "category": "Z87",
+        "probability": 0.1845639944076538
+      },
+      {
+        "rank": 3,
+        "category": "E66",
+        "probability": 0.057863786816596985
+      }
+    ]
+  },
+  "explanation": {
+    "category": "I25",
+    "method": "Layer Integrated Gradients",
+    "steps": 50,
+    "baseline": "PAD-content baseline; special tokens preserved",
+    "source_mode": "fresh_lig",
+    "warning": "Token attribution describes model behaviour only. It is not causal clinical evidence.",
+    "convergence_delta": -0.004898190498352051,
+    "evidence_count": 12,
+    "explanation_ref": "F:\\operational_coding_twin\\runtime\\explanations\\explanation_732d19083e4e436db4a041aa.json"
+  },
+  "review": {
+    "reviewer_identity": "demo-reviewer",
+    "decision": "amend",
+    "reason": "Alternative category selected to demonstrate human amendment capability.",
+    "reviewed_at_utc": "2026-08-27T00:50:07.034973+00:00",
+    "model_recommendation": "I25",
+    "amended_category": "B96"
+  },
+  "final_category": "B96",
+  "governance": {
+    "model_reference": "P7-BIOCLINICALBERT-SEED42-CANONICAL",
+    "calibrator_reference": "P8B-CORRECTIVE-V201-SEED42::temperature=0.1838893138",
+    "claims_reference": "P10-POSTTEST-ERROR-CLAIMS-FREEZE-v201",
+    "automatic_acceptance": false,
+    "human_review_required": true
+  }
+}

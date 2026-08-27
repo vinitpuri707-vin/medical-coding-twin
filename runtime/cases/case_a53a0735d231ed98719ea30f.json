@@ -1,0 +1,24 @@
+{
+  "case_id": "REPLAY-271-8ADBACC9",
+  "state": "Ingested",
+  "created_at_utc": "2026-08-26T23:34:09.823732+00:00",
+  "updated_at_utc": "2026-08-26T23:34:09.823732+00:00",
+  "source": {
+    "mode": "frozen_validation_replay",
+    "reference": "271",
+    "sha256": "003c9b76a43023103b101161cb4100c85b4a4c43f1175b605e75b348edf6d4bf"
+  },
+  "clinical_text": null,
+  "preprocessing": null,
+  "prediction": null,
+  "explanation": null,
+  "review": null,
+  "final_category": null,
+  "governance": {
+    "model_reference": "P7-BIOCLINICALBERT-SEED42-CANONICAL",
+    "calibrator_reference": "P8B-CORRECTIVE-V201-SEED42::temperature=0.1838893138",
+    "claims_reference": "P10-POSTTEST-ERROR-CLAIMS-FREEZE-v201",
+    "automatic_acceptance": false,
+    "human_review_required": true
+  }
+}

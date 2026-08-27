@@ -1,0 +1,332 @@
+{
+  "schema_version": "1.0.0",
+  "research_specification": {
+    "version": "2.0.0",
+    "effective_date": "2026-08-17",
+    "status": "FROZEN"
+  },
+  "protocol": {
+    "version": "2.0.1",
+    "status": "FROZEN"
+  },
+  "post_test_governance": {
+    "version": "2.1.0",
+    "record_date": "2026-08-22",
+    "status": "FROZEN CLAIMS / STATUS LAYER"
+  },
+  "dataset": "BNS-CCB-2.0.0",
+  "aim": "To design, implement and critically evaluate a reproducible AI-powered operational digital-twin research prototype for 50-category ICD-10 recommendation from NHS-aligned synthetic clinical text, incorporating comparative modelling, calibration, explainability, shortcut analysis and auditable human review.",
+  "objectives": {
+    "O1": {
+      "title": "Freeze and validate the BNS-CCB v2 benchmark",
+      "text": "Use the released BNS-CCB-2.0.0 modelling contract without altering its label space or supplied patient-family split. Verify dataset provenance, checksums, the 2,500-record/1,281-patient/50-category structure, the 1,750/375/375 train/validation/test allocation, and the rule that clinical_text is the only predictive feature. Preserve the test partition until the Phase 8 protocol is frozen."
+    },
+    "O2": {
+      "title": "Establish controlled predictive comparators",
+      "text": "Evaluate the implemented TF-IDF (word 1–2 grams) + balanced multinomial logistic regression baseline and the primary BioClinicalBERT 50-way sequence classifier using the same frozen BNS-CCB train/validation partitions. Preserve the seed-42 canonical BioClinicalBERT run and quantify transformer variability using the pre-declared seeds 42, 43 and 44 without using the test partition."
+    },
+    "O3": {
+      "title": "Quantify predictive performance, robustness and failure modes",
+      "text": "Report accuracy, balanced accuracy, micro-F1, macro precision/recall/F1, weighted-F1, top-3/top-5 accuracy, log loss and per-class error analysis. Report the lexical baseline even when it outperforms the transformer. Evaluate shortcut sensitivity and report mean ± sample standard deviation across the three deterministic transformer seeds once Phase 7B is executed."
+    },
+    "O4": {
+      "title": "Evaluate probability reliability and explanation quality",
+      "text": "Using the frozen seed-42 validation logits/probabilities, report uncalibrated negative log-likelihood, multiclass Brier score and Expected Calibration Error (ECE). Fit any selected post-hoc calibration method on validation data only. Generate token-level explanations for the frozen transformer and perform at least one quantitative faithfulness or stability evaluation. Calibration and XAI methods must be fixed before test access."
+    },
+    "O5": {
+      "title": "Implement and verify the operational digital twin",
+      "text": "Implement an event-driven prototype that carries a coding case through ingestion, preprocessing, prediction, ranked alternatives, calibrated confidence, explanation, human review and completion/error states. The reviewer must be able to accept, reject or amend a recommendation, and material state transitions must be recorded in an append-only audit history. Automated tests and at least one reproducible end-to-end demonstration are required."
+    }
+  },
+  "research_questions": {
+    "RQ1": {
+      "title": "Benchmark validity and shortcut risk",
+      "question": "To what extent does BNS-CCB-2.0.0 provide a reproducible and leakage-controlled synthetic benchmark for 50-category ICD-10 recommendation, and what synthetic shortcut risks remain after patient-family separation and text-only feature enforcement?"
+    },
+    "RQ2": {
+      "title": "Predictive comparison",
+      "question": "How does BioClinicalBERT compare with the TF-IDF multinomial logistic-regression baseline for single-label 50-category ICD-10 recommendation under the same frozen BNS-CCB partitions?"
+    },
+    "RQ3": {
+      "title": "Calibration and reliability",
+      "question": "How well calibrated are the frozen transformer's predicted probabilities, and can a validation-fitted post-hoc calibration method improve probability reliability without using test data for fitting or selection?"
+    },
+    "RQ4": {
+      "title": "Explainability",
+      "question": "To what extent do token-level attribution methods identify model-relevant evidence for ICD-10 recommendations, and how faithful or stable are those explanations under a pre-specified perturbation/stability evaluation?"
+    },
+    "RQ5": {
+      "title": "Operational digital twin",
+      "question": "Can ranked predictions, calibrated confidence, explanations and human accept/reject/amend decisions be represented in an event-driven operational digital twin with reproducible state transitions and an auditable case history?"
+    }
+  },
+  "hypotheses": {
+    "H1": {
+      "title": "Predictive comparison",
+      "null": "On the locked BNS-CCB test partition, BioClinicalBERT does not improve the pre-declared primary predictive measure (macro-F1) over the TF-IDF logistic-regression baseline.",
+      "alternative": "On the locked BNS-CCB test partition, BioClinicalBERT improves macro-F1 over the TF-IDF logistic-regression baseline.",
+      "result": "NOT SUPPORTED"
+    },
+    "H2": {
+      "title": "Calibration",
+      "null": "Validation-fitted post-hoc calibration does not improve probability calibration on the locked test partition.",
+      "alternative": "Validation-fitted post-hoc calibration improves probability calibration on the locked test partition, evidenced by lower ECE and/or multiclass Brier score and/or NLL, while discrimination is reported separately.",
+      "result": "SUPPORTED"
+    }
+  },
+  "final_results": {
+    "baseline_accuracy": 1.0,
+    "baseline_macro_f1": 1.0,
+    "transformer_accuracy": 0.912,
+    "transformer_macro_f1": 0.878264,
+    "transformer_minus_baseline_macro_f1": -0.121736,
+    "h1_ci_lower": -0.129076,
+    "h1_ci_upper": -0.112,
+    "raw_nll": 1.42104,
+    "calibrated_nll": 0.235008,
+    "nll_difference": -1.186032,
+    "nll_ci_lower": -1.257841,
+    "nll_ci_upper": -1.114956,
+    "raw_brier": 0.5160255455212994,
+    "calibrated_brier": 0.12275846411598085,
+    "raw_ece_15": 0.5825058279792223,
+    "calibrated_ece_15": 0.053714356051539874,
+    "transformer_test_errors": 33,
+    "top3_test_accuracy": 1.0
+  },
+  "frozen_claims": {
+    "C1": "The transformer-superiority hypothesis was not supported.",
+    "C2": "The calibration hypothesis was supported.",
+    "C3": "BNS-CCB is a synthetic benchmark and is susceptible to lexical/template shortcuts.",
+    "C4": "The results do not establish generalisation to real NHS clinical data.",
+    "C5": "Model predictions require human review."
+  },
+  "research_traceability": [
+    {
+      "rq_id": "RQ1",
+      "objective_ids": [
+        "O1",
+        "O3"
+      ],
+      "research_phases": [
+        "Phase 3 — benchmark construction/provenance",
+        "Phase 5 — leakage and shortcut analysis",
+        "Phase 10 — post-test failure analysis and claims freeze",
+        "Phase 11A — post-test governance synchronisation"
+      ],
+      "research_archive_reference": [
+        "BNS-CCB-2.0.0 release/audit package",
+        "Phase 5 shortcut/leakage artefacts",
+        "P10-POSTTEST-ERROR-CLAIMS-FREEZE-v201",
+        "POST_TEST_GOVERNANCE_UPDATE_v2.1.0"
+      ],
+      "implementation": [
+        "artifacts/model/label_mapping.json",
+        "artifacts/governance/final_claims_freeze.json",
+        "src/operational_coding_twin/frozen_resources.py"
+      ],
+      "local_evidence": [
+        "evidence/01_verification/frozen_scientific_contract.txt",
+        "artifacts/provenance/source_artifact_hashes.json",
+        "docs/final_implementation_record.md"
+      ],
+      "implementation_requirements": [
+        "OT-R01",
+        "OT-R02",
+        "OT-R18",
+        "OT-R46",
+        "OT-R49"
+      ],
+      "final_answer": "BNS-CCB-2.0.0 provides a reproducible frozen synthetic benchmark under the supplied patient-family split and clinical_text-only modelling contract, but the evidence also demonstrates substantial lexical/template shortcut risk. The perfect lexical-baseline test result is consistent with extreme synthetic separability. The benchmark therefore supports controlled methodological evaluation but does not establish real NHS generalisation.",
+      "claim_boundary": "Do not interpret benchmark reproducibility as external clinical validity. BNS-CCB remains wholly synthetic.",
+      "dissertation_sections": [
+        "Chapter 3 — Dataset, benchmark construction and validity controls",
+        "Chapter 5 — Shortcut/failure analysis",
+        "Chapter 6 — Validity limitations and NHS generalisation"
+      ],
+      "status": "ANSWERED_WITH_MAJOR_VALIDITY_LIMITATION"
+    },
+    {
+      "rq_id": "RQ2",
+      "objective_ids": [
+        "O2",
+        "O3"
+      ],
+      "research_phases": [
+        "Phase 6 — TF-IDF/logistic-regression baseline",
+        "Phase 7 — canonical BioClinicalBERT",
+        "Phase 7B — three-seed robustness",
+        "Phase 9 — one-shot confirmatory test",
+        "Phase 10 — post-test error analysis"
+      ],
+      "research_archive_reference": [
+        "Phase 6 frozen lexical baseline",
+        "P7-BIOCLINICALBERT-SEED42-CANONICAL",
+        "P7-BIOCLINICALBERT-3SEED-ROBUSTNESS-v1",
+        "P9-ONESHOT-CONFIRMATORY-v201-SEED42",
+        "P10-POSTTEST-ERROR-CLAIMS-FREEZE-v201"
+      ],
+      "implementation": [
+        "artifacts/model/model.safetensors",
+        "artifacts/model/config.json",
+        "src/operational_coding_twin/inference.py"
+      ],
+      "local_evidence": [
+        "evidence/03_fresh_inference/E07_fresh_prediction.png",
+        "evidence/01_verification/frozen_scientific_contract.txt"
+      ],
+      "implementation_requirements": [
+        "OT-R01",
+        "OT-R02",
+        "OT-R03",
+        "OT-R04",
+        "OT-R05",
+        "OT-R06"
+      ],
+      "final_answer": "BioClinicalBERT did not outperform the frozen lexical baseline. On the locked one-shot test partition, the TF-IDF/logistic-regression baseline achieved macro-F1 1.000000, whereas BioClinicalBERT achieved macro-F1 0.878264. The transformer-minus-baseline difference was -0.121736 with 95% CI [-0.129076, -0.112000]. Accordingly, the transformer-superiority hypothesis was not supported.",
+      "claim_boundary": "The negative result must be retained. The operational prototype must not be used to imply transformer superiority.",
+      "dissertation_sections": [
+        "Chapter 3 — Comparative modelling methodology",
+        "Chapter 5 — Predictive comparison",
+        "Chapter 6 — Interpretation of the negative result"
+      ],
+      "status": "ANSWERED_NEGATIVE_RESULT"
+    },
+    {
+      "rq_id": "RQ3",
+      "objective_ids": [
+        "O4"
+      ],
+      "research_phases": [
+        "Phase 8B-Corrective — validation-only temperature calibration",
+        "Phase 9 — one-shot confirmatory calibration evaluation",
+        "Phase 10 — final claims freeze"
+      ],
+      "research_archive_reference": [
+        "P8B-CORRECTIVE-V201-SEED42",
+        "P9-ONESHOT-CONFIRMATORY-v201-SEED42",
+        "P10-POSTTEST-ERROR-CLAIMS-FREEZE-v201"
+      ],
+      "implementation": [
+        "artifacts/calibration/temperature_scaling.json",
+        "src/operational_coding_twin/config.py",
+        "src/operational_coding_twin/inference.py"
+      ],
+      "local_evidence": [
+        "evidence/02_replay/E03_replay_prediction.png",
+        "evidence/03_fresh_inference/E07_fresh_prediction.png"
+      ],
+      "implementation_requirements": [
+        "OT-R07",
+        "OT-R08",
+        "OT-R09",
+        "OT-R29",
+        "OT-R30"
+      ],
+      "final_answer": "Validation-fitted scalar temperature calibration substantially improved probability reliability on the locked test partition. NLL decreased from 1.421040 to 0.235008; multiclass Brier score decreased from 0.516026 to 0.122758; and 15-bin ECE decreased from 0.582506 to 0.053714. The primary calibrated-minus-raw NLL difference was -1.186032 with 95% CI [-1.257841, -1.114956]. The calibration hypothesis was therefore supported.",
+      "claim_boundary": "Calibration improves probability reliability but does not convert confidence into a probability of clinical safety, coding correctness or billing correctness. No automatic acceptance threshold is authorised.",
+      "dissertation_sections": [
+        "Chapter 3 — Calibration methodology",
+        "Chapter 5 — Calibration results",
+        "Chapter 6 — Confidence interpretation"
+      ],
+      "status": "ANSWERED_H2_SUPPORTED"
+    },
+    {
+      "rq_id": "RQ4",
+      "objective_ids": [
+        "O4"
+      ],
+      "research_phases": [
+        "Phase 8A — XAI protocol freeze",
+        "Phase 8B-Corrective — LIG and quantitative faithfulness evaluation",
+        "Phase 11B — operational XAI integration"
+      ],
+      "research_archive_reference": [
+        "P8B-CORRECTIVE-V201-SEED42",
+        "Deterministic validation n=100 Layer Integrated Gradients package",
+        "Top-10% positive-attribution masking versus 20 deterministic random-mask comparisons"
+      ],
+      "implementation": [
+        "src/operational_coding_twin/explainability.py",
+        "artifacts/replay/layer_integrated_gradients_cases.csv"
+      ],
+      "local_evidence": [
+        "evidence/02_replay/E04_replay_xai.png",
+        "evidence/03_fresh_inference/E08_fresh_lig.png"
+      ],
+      "implementation_requirements": [
+        "OT-R10",
+        "OT-R11",
+        "OT-R12",
+        "OT-R13",
+        "OT-R14",
+        "OT-R17"
+      ],
+      "final_answer": "The project implemented a pre-specified token-level explanation protocol using predicted-class Layer Integrated Gradients with 50 integration steps and a PAD-content baseline, and completed a quantitative faithfulness evaluation using targeted-token masking against deterministic random masking. This provides model-relevance and faithfulness evidence beyond visual inspection alone.",
+      "claim_boundary": "Attribution is evidence about model behaviour. It is not causal clinical evidence and does not prove that a prediction is clinically correct.",
+      "dissertation_sections": [
+        "Chapter 3 — Explainability methodology",
+        "Chapter 4 — XAI integration",
+        "Chapter 5 — Explanation evaluation",
+        "Chapter 6 — Explainability limitations"
+      ],
+      "status": "ANSWERED_WITH_BOUNDED_XAI_EVIDENCE"
+    },
+    {
+      "rq_id": "RQ5",
+      "objective_ids": [
+        "O5"
+      ],
+      "research_phases": [
+        "Phase 8B — frozen confidence/XAI inputs",
+        "Phase 10 — human-review claims freeze",
+        "Phase 11B — operational digital-twin implementation",
+        "Steps 15–18 — final implementation/evidence verification"
+      ],
+      "research_archive_reference": [
+        "P8B-CORRECTIVE-V201-SEED42",
+        "P10-POSTTEST-ERROR-CLAIMS-FREEZE-v201",
+        "Phase 11B operational workflow evidence"
+      ],
+      "implementation": [
+        "src/operational_coding_twin/digital_twin.py",
+        "src/operational_coding_twin/case_store.py",
+        "src/operational_coding_twin/audit_log.py",
+        "src/operational_coding_twin/inference.py",
+        "src/operational_coding_twin/explainability.py",
+        "app/streamlit_app.py"
+      ],
+      "local_evidence": [
+        "evidence/04_human_review/E05_awaiting_human_review.png",
+        "evidence/04_human_review/E06_accepted_completed.png",
+        "evidence/04_human_review/E09_amended_completed.png",
+        "evidence/05_audit/E10_audit_history.png",
+        "evidence/05_audit/E11_audit_integrity_pass.png",
+        "evidence/01_verification/pytest_full_results.txt",
+        "evidence/01_verification/project_verification.txt"
+      ],
+      "implementation_requirements": [
+        "OT-R19–OT-R42",
+        "OT-R43–OT-R49"
+      ],
+      "final_answer": "Yes, the required information can be represented in an event-driven operational research prototype. The final implementation maintains explicit coding-case state, ranked model recommendations, calibrated descriptive confidence, explanations, mandatory human review, Accept/Reject/Amend decisions, persistent case disposition and a SHA-256 chained tamper-evident audit history.",
+      "claim_boundary": "This answers the engineering feasibility question only. It does not demonstrate real NHS deployment readiness, clinical safety, coder productivity improvement or autonomous coding suitability.",
+      "dissertation_sections": [
+        "Chapter 4 — Operational digital-twin architecture",
+        "Chapter 4 — Human-review workflow",
+        "Chapter 5 — Engineering verification",
+        "Chapter 6 — Operational and clinical limitations"
+      ],
+      "status": "ANSWERED_ENGINEERING_PROTOTYPE"
+    }
+  ],
+  "boundaries": {
+    "real_nhs_generalisation_claimed": false,
+    "clinical_deployment_readiness_claimed": false,
+    "automatic_acceptance": false,
+    "human_review_required": true,
+    "phase9_runtime_dependency": false,
+    "xai_is_causal_clinical_evidence": false
+  }
+}
